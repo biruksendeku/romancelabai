@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h3 {
+	padding: 5px 5px;
+	font-size: 0.95rem;
+}
+
+p {
+	padding: 0 5px;
+	font-size: 0.85rem;
+}
+
+body.darkmode {
+	background-color: #1a1a1a;
+	color: #f5f5f5;
+}

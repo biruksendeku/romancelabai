@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Confession Time &bull; Romancelab AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/confess.css">
+    <script src="/js/confess.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="floating-hearts">
+        <div class="heart">❤</div>
+        <div class="heart">💕</div>
+        <div class="heart">✨</div>
+        <div class="heart">🌸</div>
+        <div class="heart">🌟</div>
+    </div>
+
+    <div class="nav__container">
+        <section class="menu__links__section" id="menu__links__section">
+            <button class="close__btn" id="close__btn">
+                <img src="/icons/close.svg" alt="X" />
+            </button>
+            <a href="/"> &bull; Home </a>
+            <a href="/examples"> &bull; Love Examples </a>
+            <!--<a href="/donate"> &bull; Donate </a>-->
+            <a href="/updates"> &bull; Updates </a>
+            <a href="/faq"> &bull; FAQ </a>
+        </section>
+        <nav class="nav">
+            <div class="nav__divs nav__div1">
+                <button id="menu__btn" class="menu__btn">
+                    <img src="/icons/menu.svg" alt="Menu" />
+                </button>
+            </div>
+            <div class="nav__divs nav__div2">
+                <a href="/" class="logo">Romancelab AI</a>
+            </div>
+            <div class="nav__divs nav__div3">
+                <a href="/donate">
+                    <img src="/icons/donate.svg" alt="Donate" />
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme__choice__container">
+        <button id="theme__choice" class="theme__choice">
+            <img id="light__theme" style="display: none;" width="40px" height="auto" src="/icons/sun.svg" alt="☀️" />
+            <img id="dark__theme" width="40px" height="auto" src="/icons/moon.svg" alt="🌙" />
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="confession-wrapper">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="confession-card" id="confessionCard">
+                        <div class="seal" id="seal">
+                            <div class="wax"></div>
+                        </div>
+                        
+                        <div class="confession-content" id="confessionContent">
+                            <!-- Offline message placeholder -->
+                            <p class="offline__msg__manager"></p>
+                            
+                            <div class="confession-header">
+                                <h3 class="confession-title" id="confession-title">
+                                    <% if(prompt) { %>
+                                        <%- prompt %>
+                                    <% } else { %>
+                                        A Message from the Heart 💌
+                                    <% } %>
+                                </h3>
+                                <div class="title-underline"></div>
+                            </div>
+
+                            <!-- the REAL Confession PART -->
+                            <% if (confession && confession.text) { %>
+                                <div class="confession-text">
+                                    <div class="paper-texture">
+                                        <p class="result__paragraph" id="confession__result__copy">
+                                            <%= confession.text %>
+                                        </p>
+                                    </div>
+                                    <button id="copy__btn" class="copy__btn"><img src="/icons/copy.svg" style="transform: translateY(5px);" width="25px" height="auto" alt="copy svg"> Copy </button>
+                                </div>
+
+                                <!-- Cache the Confession in localStorage -->
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        <% if (confession && confession.text && confession.timestamp) { %>
+                                            try {
+                                                const confessionData = {
+                                                    text: `<%= confession.text.replace(/'/g, "\\'").replace(/\n/g, '\\n') %>`,
+                                                    timestamp: <%= confession.timestamp %>
+                                                };
+
+                                                const lastSaved = JSON.parse(localStorage.getItem('lastConfession'));
+                                                if (!lastSaved || confessionData.timestamp > lastSaved.timestamp) {
+                                                    localStorage.setItem('lastConfession', JSON.stringify(confessionData));
+                                                }
+                                            } catch (error) {
+                                                console.error('Error saving to localStorage:', error);
+                                            }
+                                        <% } %>
+                                        checkOfflineStatus();
+                                    });
+
+                                    function checkOfflineStatus() {
+                                        if (!navigator.onLine) {
+                                            loadCachedConfession();
+                                        }
+                                    }
+
+                                    function loadCachedConfession() {
+                                        try {
+                                            const cached = JSON.parse(localStorage.getItem('lastConfession'));
+                                            const resultHolder = document.getElementById('confessionContent');
+                                            const offlineMsg = document.querySelector('.offline__msg__manager');
+
+                                            if (cached && cached.text) {
+                                                offlineMsg.innerHTML = `<p class="offline__notice">📡 Offline Mode: Showing last Confession</p>`;
+                                                if (!<%= (confession && confession.text) ? 'true' : 'false' %>) {
+                                                    resultHolder.innerHTML = `<div class="confession-text"><div class="paper-texture"><p class="result__paragraph">${cached.text}</p></div></div>`;
+                                                }
+                                            } else if (!<%= (confession && confession.text) ? 'true' : 'false' %>) {
+                                                resultHolder.innerHTML = `<p class="error__message">You're offline and no stories are cached yet.</p>`;
+                                            }
+                                        } catch (error) {
+                                            console.error('Error loading cached Confession:', error);
+                                        }
+                                    }
+
+                                    window.addEventListener('online', checkOfflineStatus);
+                                    window.addEventListener('offline', checkOfflineStatus);
+                                </script>
+                            <% } %>
+
+                            <% if (error && (!confession || !confession.text)) { %>
+                                <p class="error__message">
+                                    💔 Error: <%= error %>
+                                </p>
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        const cached = JSON.parse(localStorage.getItem('lastConfession'));
+                                        if (cached && cached.text) {
+                                            document.querySelector('.offline__msg__manager').innerHTML =
+                                                `<p class="offline__notice"> Showing last cached Confession due to error</p>`;
+                                            document.querySelector('.confession-text .paper-texture').innerHTML +=
+                                                `<p class="result__paragraph">${cached.text}</p>`;
+                                        }
+                                    });
+                                </script>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="/" class="btn btn-primary heartbeat">
+                    <img src="/icons/starsWhite.svg" width="30px" height="auto" alt="✨"> 
+                    Write Another Love Letter
+                </a>
+                <button class="btn btn-romantic" id="printBtn">
+                    <img src="/icons/print2.svg" width="30px" height="auto" alt="📄"> 
+                    Preserve This Memory
+                </button>
+                <!--<button class="btn btn-romantic" id="shareBtn">
+                    <img src="/icons/share.svg" width="30px" height="auto" alt="📤"> 
+                    Share This Feeling
+                </button>-->
+            </div>
+        </div>
+    </div>
+
+    <!-- Print-specific styles -->
+    <!--<style>
+        @media print {
+            .action-buttons, .offline__msg__manager, .nav, .theme__choice__container,
+            .floating-hearts, .envelope-flap, .seal {
+                display: none !important;
+            }
+
+            .confession-card {
+                border: none !important;
+                box-shadow: none !important;
+                transform: none !important;
+                margin: 0 !important;
+            }
+
+            .envelope, .envelope-body {
+                all: unset !important;
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+                padding: 20px !important;
+            }
+
+            .paper-texture {
+                background: white !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+
+        #printBtn, #shareBtn {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>-->
+
+    <!--<script>
+        // Enhanced user experience
+        document.addEventListener('DOMContentLoaded', function() {
+            const printBtn = document.getElementById('printBtn');
+            const shareBtn = document.getElementById('shareBtn');
+            const envelope = document.getElementById('envelope');
+            const seal = document.getElementById('seal');
+
+            // Envelope opening animation
+            if (envelope) {
+                setTimeout(() => {
+                    envelope.classList.add('opened');
+                }, 1000);
+            }
+
+            // Print functionality
+            printBtn.addEventListener('click', function() {
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+                if (isMobile) {
+                    if (window.chrome) {
+                        window.print();
+                    } else if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+                        alert('To print: Tap Share → Scroll down → Tap Print');
+                    } else {
+                        window.print();
+                    }
+                } else {
+                    window.print();
+                }
+            });
+
+            // Share functionality
+            shareBtn.addEventListener('click', function() {
+                const confessionText = document.querySelector('.result__paragraph')?.textContent || 'A beautiful confession was created with Romancelab AI 💌';
+                
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'My Heartfelt Confession 💕',
+                        text: confessionText,
+                        url: window.location.href
+                    }).catch(() => {
+                        fallbackShare(confessionText);
+                    });
+                } else {
+                    fallbackShare(confessionText);
+                }
+            });
+
+            function fallbackShare(text) {
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text).then(() => {
+                        alert('Confession copied to clipboard!');
+                    }).catch(() => {
+                        prompt('Copy this confession to share:', text);
+                    });
+                } else {
+                    prompt('Copy this confession to share:', text);
+                }
+            }
+
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    e.preventDefault();
+                    window.print();
+                }
+            });
+
+            // Add some interactive magic
+            seal?.addEventListener('click', function() {
+                this.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 300);
+            });
+        });
+    </script>-->
+
+    <hr class="hr__footer">
+    <!--<div class="footer__div">
+        <footer class="footer">
+            <p>&copy; All Rights Reserved. <br>
+                Made with ❤️ by Romancelab AI &bull; <%= new Date().getFullYear() %>
+            </p>
+        </footer>
+    </div>-->
+    <div class="footer__div">
+            <p>&copy; All Rights Reserved. <br>
+                Made with <img src="/icons/heart.svg" style="transform: translateY(5px);" width="20px" height="auto" alt="❤️"> by Romancelab AI &bull; <%= new Date().getFullYear() %>
+            </p>
+            <div class="legal-links">
+                <a href="/terms">Terms of Use</a> <span class="tos__privacy">&bull;</span>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+    </div>
+
+</body>
+</html>

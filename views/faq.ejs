@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Questions & Answers &bull; Romancelab AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/confess.css">
+    <link rel="stylesheet" href="/css/faq.css">
+    <script src="/js/faq.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="floating-hearts">
+        <div class="heart">❤</div>
+        <div class="heart">💕</div>
+        <div class="heart">✨</div>
+        <div class="heart">🌸</div>
+        <div class="heart">🌟</div>
+    </div>
+
+    <div class="nav__container">
+        <section class="menu__links__section" id="menu__links__section">
+            <button class="close__btn" id="close__btn">
+                <img src="/icons/close.svg" alt="X" />
+            </button>
+            <a href="/"> &bull; Home </a>
+            <a href="/examples"> &bull; Love Examples </a>
+            <!--<a href="/donate"> &bull; Donate </a>-->
+            <a href="/updates"> &bull; Updates </a>
+            <a href="/faq" class="active" style="color: #ff6d8d;"><b> &bull; FAQ </b></a>
+        </section>
+        <nav class="nav">
+            <div class="nav__divs nav__div1">
+                <button id="menu__btn" class="menu__btn">
+                    <img src="/icons/menu.svg" alt="Menu" />
+                </button>
+            </div>
+            <div class="nav__divs nav__div2">
+                <a href="/" class="logo">Romancelab AI</a>
+            </div>
+            <div class="nav__divs nav__div3">
+                <a href="/donate">
+                    <img src="/icons/donate.svg" alt="Donate" />
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme__choice__container">
+        <button id="theme__choice" class="theme__choice">
+            <img id="light__theme" style="display: none;" width="40px" height="auto" src="/icons/sun.svg" alt="☀️" />
+            <img id="dark__theme" width="40px" height="auto" src="/icons/moon.svg" alt="🌙" />
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="faq-hero">
+            <h1 class="hero-title">Questions from Loving Hearts <!--💭--></h1>
+            <p class="hero-subtitle">Everything you need to know about creating the perfect confession</p>
+            <!--<div class="search-box">
+                <input type="text" id="faqSearch" placeholder="Search for answers... 🔍" />
+            </div>-->
+        </div>
+
+        <!-- FAQ Categories -->
+        <div class="faq-categories">
+            <button class="category-btn active" data-category="all">All Questions</button>
+            <button class="category-btn" data-category="getting-started">Getting Started</button>
+            <button class="category-btn" data-category="writing">Writing Tips</button>
+            <button class="category-btn" data-category="technical">Technical</button>
+            <button class="category-btn" data-category="privacy">Privacy & Safety</button>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div class="faq-accordion">
+            <!-- Getting Started Questions -->
+            <div class="faq-category-section" data-category="getting-started">
+                <h2 class="category-title">Getting Started <img class="new__icons" src="/icons/starShine.svg" width="40px" height="auto" alt="🌟"></h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">What exactly is Romancelab AI?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Romancelab AI is your personal love confession assistant! We help you put your deepest feelings into beautiful, heartfelt words when you're struggling to find the right way to express yourself. Whether you're shy, nervous, or just want to make your confession extra special, we're here to help.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">How do I create my first confession?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>It's as easy as 1-2-3!</p>
+                        <ol>
+                            <li>Go to our homepage and describe your situation in the text box</li>
+                            <li>Tell us about your feelings, your relationship, and what you want to say</li>
+                            <li>Click "Create My Confession" and watch the magic happen!</li>
+                        </ol>
+                        <p>Need inspiration? Check out our <a href="/examples">Examples page</a> for ready-to-use ideas!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">Is this service really free?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Romancelab AI is completely free to use. We believe that love shouldn't have a price tag. </p>
+                        <p>We're passionate about helping people express their feelings, and we'll always keep the core features free. If you'd like to support us, you can check out our donation page, but there's absolutely no pressure!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Writing Tips Questions -->
+            <div class="faq-category-section" data-category="writing">
+                <h2 class="category-title">Writing the Perfect Confession <img class="new__icons" src="/icons/write.svg" width="40px" height="auto" alt="💌"></h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">How can I make my confession more personal?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Great question! Here are some tips to make it uniquely yours:</p>
+                        <ul>
+                            <li> <strong>Include specific memories</strong> - mention that time you both got coffee in the rain</li>
+                            <li> <strong>Use inside jokes</strong> - references only you two understand</li>
+                            <li> <strong>Mention little details</strong> - their laugh, how they tilt their head, their kindness</li>
+                            <li> <strong>Be honest about your nerves</strong> - vulnerability is beautiful</li>
+                        </ul>
+                        <p>The more specific you are in your prompt, the more personal your confession will be!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">What if I don't like the confession generated?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>No worries at all! Love is about authenticity.</p>
+                        <p>You can:</p>
+                        <ul>
+                            <li> <strong>Generate again</strong> with the same prompt for different variations</li>
+                            <li> <strong>Edit the text</strong> directly to make it sound more like you</li>
+                            <li> <strong>Mix and match</strong> - take parts you like from different versions</li>
+                            <li> <strong>Try a different prompt</strong> - sometimes rephrasing helps</li>
+                        </ul>
+                        <p>Remember: The AI provides a foundation, but you're the heart behind it!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">How long should my confession be?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>There's no perfect length - it depends on your situation! </p>
+                        <ul>
+                            <li> <strong>Short & Sweet</strong> (2-3 sentences): Great for casual confessions or if you're both shy</li>
+                            <li> <strong>Medium Length</strong> (1 paragraph): Perfect for most situations - heartfelt but not overwhelming</li>
+                            <li> <strong>Long & Detailed</strong> (multiple paragraphs): Ideal for deep feelings or complex situations</li>
+                        </ul>
+                        <p>Trust your instincts! The right length is whatever feels authentic to you.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Questions -->
+            <div class="faq-category-section" data-category="technical">
+                <h2 class="category-title">Technical Questions <img class="new__icons" src="/icons/fix.svg" width="40px" height="auto" alt="🔧"> </h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">Can I use Romancelab AI on my phone?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely!  Romancelab AI works beautifully on all devices:</p>
+                        <ul>
+                            <li> Smartphones (iOS & Android)</li>
+                            <li> Tablets</li>
+                            <li> Laptops & Desktop computers</li>
+                        </ul>
+                        <p>Our design is fully responsive, so you can create heartfelt confessions anywhere, anytime. Perfect for when inspiration strikes between classes!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">How do I save or print my confession?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>We've made it easy to preserve your special words! </p>
+                        <ul>
+                            <li> <strong>Print:</strong> Click the "Preserve This Memory" button on your confession page</li>
+                            <li> <strong>Screenshot:</strong> Take a screenshot on your phone or computer</li>
+                            <li> <strong>Copy & Paste:</strong> Simply select the text and copy it to any app</li>
+                            <li> <strong>Auto-save:</strong> Your last confession is automatically saved for offline viewing</li>
+                        </ul>
+                        <p>Pro tip: Printing on nice paper makes it extra special!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">What if the website isn't working?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oh no! Let's get you back to confessing: </p>
+                        <ul>
+                            <li> <strong>Refresh the page</strong> - sometimes a simple refresh fixes everything</li>
+                            <li> <strong>Check your internet</strong> - we work offline too, but need connection for new confessions</li>
+                            <li> <strong>Clear your browser cache</strong> - old data can sometimes cause issues</li>
+                            <li> <strong>Try a different browser</strong> - or device if possible</li>
+                        </ul>
+                        <p>If problems continue, please let us know! We're always improving. </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy & Safety Questions -->
+            <div class="faq-category-section" data-category="privacy">
+                <h2 class="category-title">Privacy & Safety <img src="/icons/security.svg" class="new__icons" width="40px" height="auto" alt="🔒"></h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">Is my confession private and secure?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your privacy is our top priority! </p>
+                        <ul>
+                            <li> <strong>We don't store your personal confessions</strong> on our servers</li>
+                            <li> <strong>Local storage only</strong> - your confessions stay on your device</li>
+                            <li> <strong>No registration required</strong> - no personal information needed</li>
+                            <li> <strong>Secure connection</strong> - we use HTTPS to protect your data</li>
+                        </ul>
+                        <p>Your love stories belong to you - we're just here to help you tell them beautifully!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">Can the person I confess to find out I used AI?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>This is completely up to you! </p>
+                        <p>Some people proudly share that they used Romancelab AI because:</p>
+                        <ul>
+                            <li> It shows they cared enough to seek help expressing their feelings</li>
+                            <li> It demonstrates they wanted to make the confession extra special</li>
+                            <li> It proves they were nervous but brave enough to try anyway</li>
+                        </ul>
+                        <p>Others prefer to keep it private. There's no right or wrong - it's your love story to tell however feels authentic to you!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span class="question-text">What's your advice for safe confessing?</span>
+                        <!--<span class="toggle-icon"><img src="/icons/plus.svg" width="40px" height="auto" alt="➕"></span>-->
+                    </div>
+                    <div class="faq-answer">
+                        <p>Your emotional safety is important! Here are our tips: </p>
+                        <ul>
+                            <li> <strong>Choose the right time and place</strong> - somewhere you both feel comfortable</li>
+                            <li> <strong>Be prepared for any outcome</strong> - hope for the best, but be ready for any response</li>
+                            <li> <strong>Consider your existing relationship</strong> - think about how this might change things</li>
+                            <li> <strong>Trust your instincts</strong> - if something feels off, it's okay to wait</li>
+                            <li>🌱 <strong>Remember your worth</strong> - no response changes how amazing you are!</li>
+                        </ul>
+                        <p>You're being incredibly brave by sharing your feelings. That itself is something to be proud of!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Still Have Questions -->
+        <div class="contact-section">
+            <div class="contact-card">
+                <h2>Still Have Questions? <img src="/icons/msg.svg" class="new__icons" width="40px" height="auto" alt="💬"></h2>
+                <p>We're here to help! Love can be confusing, but getting help shouldn't be.</p>
+                <div class="contact-options">
+                    <div class="contact-option">
+                        <span class="option-emoji"><img src="/icons/examples.svg" width="40px" height="auto" alt="💌"></span>
+                        <strong>Check our Examples</strong>
+                        <p>Get inspired by real confession examples</p>
+                        <a href="/examples" class="btn btn-primary">View Examples</a>
+                    </div>
+                    <div class="contact-option">
+                        <span class="option-emoji"><img src="/icons/tips.svg" width="40px" height="auto" alt="📚"></span>
+                        <strong>Tips & Tricks</strong>
+                        <p>Learn how to create the perfect confession</p>
+                        <a href="/tips" class="btn btn-secondary">Get Tips</a>
+                    </div>
+                    <div class="contact-option">
+                        <span class="option-emoji"><img src="/icons/new.svg" width="40px" height="auto" alt="🆕"></span>
+                        <strong>Latest Updates</strong>
+                        <p>See what's new with Romancelab AI</p>
+                        <a href="/updates" class="btn btn-romantic">View Updates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const searchInput = document.getElementById('faqSearch');
+            
+            // Accordion toggle
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon');
+                    
+                    // Toggle current question
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                    //icon.textContent = answer.style.display === 'block' ? '➖' : '➕';
+                    //icon.style.backgroundImage = answer.style.display === 'block' ? "url('/icons/minus.svg')" : "url('/icons/plus.svg')";
+                    
+                    // Close other questions (optional - remove if you want multiple open)
+                    /* here */
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== this) {
+                            const otherAnswer = otherQuestion.nextElementSibling;
+                            const otherIcon = otherQuestion.querySelector('.toggle-icon');
+                            otherAnswer.style.display = 'none';
+                            //otherIcon.textContent = '➕';
+                            //otherIcon.style.backgroundImage = "url('/icons/plus.svg')";
+                        }
+                    });
+                    /* to here*/
+                });
+            });
+
+            // Category filtering
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide categories
+                    document.querySelectorAll('.faq-category-section').forEach(section => {
+                        if (category === 'all' || section.getAttribute('data-category') === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    const question = item.querySelector('.question-text').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        // Highlight matching text
+                        highlightText(item, searchTerm);
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+
+            function highlightText(element, searchTerm) {
+                if (!searchTerm) return;
+                
+                const walker = document.createTreeWalker(
+                    element,
+                    NodeFilter.SHOW_TEXT,
+                    null,
+                    false
+                );
+                
+                let node;
+                while (node = walker.nextNode()) {
+                    const parent = node.parentNode;
+                    if (parent.nodeName === 'MARK') continue;
+                    
+                    const text = node.nodeValue;
+                    const regex = new RegExp(searchTerm, 'gi');
+                    const newText = text.replace(regex, match => `<mark>${match}</mark>`);
+                    
+                    if (newText !== text) {
+                        const newElement = document.createElement('span');
+                        newElement.innerHTML = newText;
+                        parent.replaceChild(newElement, node);
+                    }
+                }
+            }
+
+            // Add some animation to FAQ items
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.classList.add('fade-in-up');
+            });
+        });
+    </script>
+
+    <hr class="hr__footer">
+    <!--<div class="footer__div">
+        <footer class="footer">
+            <p>&copy; All Rights Reserved. <br>
+                Made with ❤️ by Romancelab AI &bull; <%= new Date().getFullYear() %>
+            </p>
+        </footer>
+    </div>-->
+    <div class="footer__div">
+        <p>&copy; All Rights Reserved. <br>
+            Made with <img src="/icons/heart.svg" style="transform: translateY(5px);" width="20px" height="auto" alt="❤️"> by Romancelab AI &bull; <%= new Date().getFullYear() %>
+        </p>
+        <div class="legal-links">
+            <a href="/terms">Terms of Use</a> <span class="tos__privacy">&bull;</span> 
+            <a href="/privacy">Privacy Policy</a>
+        </div>
+    </div>
+
+    <script defer src="/js/confess.js"></script>
+</body>
+</html>

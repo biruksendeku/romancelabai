@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/home.css">
+  <script defer src="/js/home.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Romancelab AI &bull; Where Hearts Find Their Words 💖</title>
+</head>
+<body>
+    <!-- Magical Floating Hearts Background -->
+    <div class="floating-hearts">
+        <div class="heart">❤</div>
+        <div class="heart">💕</div>
+        <div class="heart">✨</div>
+        <div class="heart">🌸</div>
+        <div class="heart">🌟</div>
+        <div class="heart">💫</div>
+        <div class="heart">🌹</div>
+        <div class="heart">💘</div>
+    </div>
+
+    <div class="nav__container">
+        <section class="menu__links__section" id="menu__links__section">
+            <button class="close__btn" id="close__btn" alt="Close">
+                <img src="/icons/close.svg" alt="Close"/>
+            </button>
+            <a href="/" class="active" style="color: #ff6d8d;"><b> &bull; Home </b></a>
+            <a href="/examples"> &bull; Love Examples </a>
+            <!--<a href="/donate"> &bull; Donate </a>-->
+            <a href="/updates"> &bull; Updates </a>
+            <a href="/faq"> &bull; FAQ </a>
+        </section>
+        <nav class="nav">
+            <div class="nav__divs nav__div1">
+                <button id="menu__btn" class="menu__btn">
+                    <img src="/icons/menu.svg" alt="Menu" />
+                </button>
+            </div>
+            <div class="nav__divs nav__div2">
+                <a href="/" class="logo">Romancelab AI</a>
+            </div>
+            <div class="nav__divs nav__div3">
+                <a href="/donate">
+                    <img src="/icons/donate.svg" alt="Donate" />
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Theme Toggle -->
+    <div class="theme__choice__container">
+        <button id="theme__choice" class="theme__choice">
+            <img id="light__theme" style="display: none;" width="40px" height="auto" src="/icons/sun.svg" alt="☀️" />
+            <img id="dark__theme" width="40px" height="auto" src="/icons/moon.svg" alt="🌙" />
+        </button>
+    </div>
+
+    <!-- Main Container with Magic -->
+    <main class="container">
+        <!-- Animated Welcome Section -->
+        <div class="welcome-section">
+            <h1 class="main-title">
+                <span class="title-line">Find Your Perfect</span>
+                <span class="title-line accent">Love Words</span>
+                <span class="title-emoji">💌</span>
+            </h1>
+            
+            <div class="subtitle-container">
+                <p class="subtitle">
+                    <!--Turn those butterflies in your stomach into beautiful words that touch their heart-->
+                    Your perfect confession is just a click away. <br>Be brave - <span class="love__word__msg">Love</span> is worth the risk!
+                </p>
+                <!--<div class="sparkle">✨</div>-->
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-number latest__ai">Latest AI</div>
+                <div class="stat-label">With Modern Version</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Success Rate</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Always Here</div>
+            </div>
+        </div>
+
+        <!-- Main Form Section -->
+        <div class="form-section">
+            <div class="form-header">
+                <h2 class="form-title">
+                	Create Your Love Story
+                    <span class="form-emoji" id="confessor"><img src="/icons/write.svg" style="transform: translateY(7px);" width="40px" height="auto" alt="📝"></span>
+                </h2>
+                <p class="form-subtitle">Describe your feelings, and we'll help you express them beautifully</p>
+            </div>
+
+            <div class="form__div">
+                <form class="form" method="post" action="/confess">
+                    <div class="textarea-container">
+                        <textarea
+                            cols="40"
+                            rows="8"
+                            class="prompt"
+                            name="prompt"
+                            placeholder="There's this amazing person in my bio-chem class who has the most incredible laugh. They're super smart, always help others, and I think we'd vibe because I love science too. I get nervous every time I try to talk to them..."
+                            id="prompt"
+                            minLength="5"
+                            maxLength="270"
+                            autocomplete
+                            required
+                        ></textarea>
+                        <div class="char-counter">
+                            <!--<span id="charCount">0</span>/270-->
+                        </div>
+                    </div>
+
+                    <button class="submit__btn" id="submit__btn" type="submit">
+                        <span class="btn-text">Create My Confession</span>
+                        <span class="btn-emoji"><!--<img src="/icons/heart.svg" width="40px" height="auto" alt="💖">-->💖</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Quick Tips -->
+        <div class="tips-section">
+            <h3 class="tips-title">Quick Tips for Better Confessions <img src="/icons/lamp.svg" style="transform: translateY(7px);" width="40px" height="auto" alt="💡"></h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-emoji"><img src="/icons/starShine.svg" width="40px" height="auto" alt="🌟"></div>
+                    <p>Be specific about what you admire</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-emoji"><img src="/icons/planet.svg" width="40px" height="auto" alt="💫"></div>
+                    <p>Mention shared memories or interests</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-emoji"><img src="/icons/target.svg" width="40px" height="auto" alt="🎯"></div>
+                    <p>Keep it authentic to your personality</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-emoji"><img src="/icons/stars.svg" width="40px" height="auto" alt="✨"></div>
+                    <p>Don't be afraid to show vulnerability</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <div class="cta-card">
+                <h3>Need Inspiration? <!--✨--></h3>
+                <p>Check out our collection of successful confession examples</p>
+                <a href="/examples" class="cta-btn">
+                    View Love Examples 
+                    <span class="cta-emoji">💕</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <hr class="hr__footer">
+    <!--<div class="footer__div">
+        <footer class="footer">
+            <p>&copy; All Rights Reserved. <br>
+                Made with ❤️ by Romancelab AI &bull; <span id="currentYear">2025</span>
+            </p>
+        </footer>
+    </div>-->
+    <div class="footer__div">
+        <p>&copy; All Rights Reserved. <br>
+            Made with <img src="/icons/heart.svg" style="transform: translateY(5px);" width="20px" height="auto" alt="❤️"> by Romancelab AI &bull; <%= new Date().getFullYear() %>
+        </p>
+
+        <div class="legal-links">
+            <a href="/terms">Terms of Use</a> <span class="tos__privacy">&bull;</span> 
+            <a href="/privacy">Privacy Policy</a>
+        </div>
+    </div>
+
+<script defer>
+// Update year automatically
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+// Character counter for textarea
+const textarea = document.getElementById('prompt');
+const charCount = document.getElementById('charCount');
+        
+textarea.addEventListener('input', function() {
+	const count = this.value.length;
+	charCount.textContent = count;
+            
+	// Change color when approaching limit
+	if (count > 240) {
+		charCount.style.color = '#ff4d6d';
+	} else if (count > 200) {
+		charCount.style.color = '#ff8e9e';
+	} else {
+		charCount.style.color = '#ccffcc';
+	}
+});
+
+// Random confession count animation
+function animateCounter() {
+	const counter = document.getElementById('confessionCount');
+	let count = 1247;
+	const finalCount = 1247 + Math.floor(Math.random() * 50);
+	const increment = Math.ceil((finalCount - count) / 50);
+            
+	const timer = setInterval(() => {
+		count += increment;
+		if (count >= finalCount) {
+			count = finalCount;
+			clearInterval(timer);
+		}
+		counter.textContent = count.toLocaleString() + '+';
+	}, 30);
+}
+
+// Start animation when page loads
+window.addEventListener('load', animateCounter);
+
+</script>
+
+<script>
+    // Auto-fill prompt when coming from examples page
+    document.addEventListener('DOMContentLoaded', function() {
+        const suggestedPrompt = localStorage.getItem('suggestedPrompt');
+        const textarea = document.querySelector('textarea[name="prompt"]');
+        
+        if (suggestedPrompt && textarea) {
+            textarea.value = suggestedPrompt;
+            textarea.focus();
+            
+            // Smooth scroll to the form
+            textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Clear the stored prompt so it doesn't fill again
+            localStorage.removeItem('suggestedPrompt');
+            
+            // Show a little success message
+            const formDiv = document.querySelector('.form__div');
+            const successMsg = document.createElement('div');
+            successMsg.innerHTML = '✨ Example loaded! Feel free to edit it to make it personal!';
+            successMsg.style.cssText = 'text-align: center; color: var(--primary-love); padding: 10px; margin-bottom: 15px; font-weight: bold;';
+            formDiv.insertBefore(successMsg, formDiv.firstChild);
+            
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                successMsg.remove();
+            }, 5000);
+        }
+    });
+</script>
+</body>
+</html>

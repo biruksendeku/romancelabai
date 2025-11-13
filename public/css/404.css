@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #f4f4f4;
+	color: #1c1c1c;
+}
+
+body.darkmode {
+	background-color: #1c1c1c;
+	color: #f4f4f4;
+}
+
+.div__404 {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 2rem auto;
+}
+
+.div__link {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: justify;
+	margin: 1rem 0;
+}
+
+.div__404 a {
+	cursor: pointer;
+	color: #4356ff;
+}
+
+.div__404 a:active {
+	color: #ff6d8d;
+}
+
+body.darkmode .div__404 a:active {
+	color: #4356ff;
+}
