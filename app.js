@@ -38,11 +38,21 @@ app.use(
 		}
 }));
 
+app.use(
+	helmet.hsts({
+		maxAge: 2592000, // 1year
+		
+	})
+);
+
 const sanitizeInput = (input) => {
 	return input.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
 
-const limiter = rateLimit({ windowMs: 60 * 1000, max: 50 });
+const limiter = rateLimit({
+	windowMs: 1 * 60 * 1000, // 1 minute
+	max: 10, // 5 requests
+});
 app.use('/confess', limiter);
 
 const corsOptions = {

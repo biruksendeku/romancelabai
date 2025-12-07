@@ -86,6 +86,7 @@ body.darkmode .menu__links__section {
   padding: 5px;
   margin: 0 auto;
   transition: color 0.3s ease;
+  font-family: 'Quicksand', 'Poppins', sans-serif;
 }
 
 .menu__links__section > a:hover {
@@ -587,6 +588,12 @@ mark {
     .contact-card {
         padding: 2rem 1rem;
     }
+}
+
+@media (max-width: 480px) {
+	.nav__div2 > a {
+		font-size: 1.15rem;
+	}
 }
 
 /* Print Styles */

@@ -95,7 +95,7 @@ body.darkmode .container {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0.3rem;
   /*background-color: rgb(240, 230, 230);
-  box-shadow: 0 2px 5px rgba(240, 210, 210, 0.3);*/
+  box-shadow: 0 2px 5px rgba(240, 210, 210, 0.3);*/0
   line-height: 1.5;
   border-bottom: 5px solid red;
   background-color: #f2f2f2;
@@ -115,7 +115,7 @@ body.darkmode .menu__links__section {
 
 .menu__links__section > a {
   text-decoration: underline;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 400;
   color: #1c1c1c;
   display: block;
@@ -123,6 +123,7 @@ body.darkmode .menu__links__section {
   padding: 5px;
   margin: 0 auto;
   transition: color 0.3s ease;
+  font-family: 'Quicksand', 'Poppins', sans-serif;
 }
 
 .menu__links__section > a:hover {
@@ -638,6 +639,12 @@ body.darkmode .footer p {
         border-left: 150px solid transparent;
         border-right: 150px solid transparent;
     }
+}
+
+@media (max-width: 480px) {
+	.nav__div2 > a {
+		font-size: 1.15rem;
+	}
 }
 
 /* Loading state */
