@@ -607,6 +607,7 @@ body.darkmode .footer p {
     text-align: center;
     color: var(--primary-love);
     font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
 }
 
 /* Responsive design */

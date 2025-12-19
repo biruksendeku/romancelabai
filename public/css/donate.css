@@ -183,10 +183,6 @@ body.darkmode .nav__div2 > a {
 
 .footer__div {
   width: 100%;
-  /*display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;*/
   display: grid;
   place-content: center;
   flex: 1;
@@ -207,11 +203,13 @@ body.darkmode .footer__div {
   background-color: #1c1c1c;
 }
 
+/* Footer stuff */
+
 .hr__footer {
     border: none;
     height: 2px;
     background: linear-gradient(90deg, transparent, #ff8fa3, transparent);
-   margin: 1.5rem auto 0.5rem;
+   margin: 3rem auto 1rem;
    max-width: 400px;
 }
 body.darkmode .hr__footer {

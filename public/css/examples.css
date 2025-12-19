@@ -181,12 +181,10 @@ body.darkmode .nav__div2 > a {
   transition: filter 0.3s ease;
 }
 
+/* Footer stuff */
+
 .footer__div {
   width: 100%;
-  /*display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;*/
   display: grid;
   place-content: center;
   flex: 1;
@@ -207,11 +205,11 @@ body.darkmode .footer__div {
 }
 
 .hr__footer {
-    border: none;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #ff8fa3, transparent);
-   margin: 1.5rem auto 0.5rem;
-   max-width: 400px;
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff8fa3, transparent);
+  margin: 3rem auto 1rem;
+  max-width: 400px;
 }
 body.darkmode .hr__footer {
     background: linear-gradient(90deg, transparent, #ff8fa3, transparent);

@@ -1,5 +1,5 @@
 {
-  "name": "romancelabai",
+  "name": "feelai",
   "version": "1.0.0",
   "description": "Romantic phrases generator and helper to express romantic feelings.",
   "main": "app.js",
@@ -14,7 +14,6 @@
     "@google/genai": "^1.28.0",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
-    "csurf": "^1.2.2",
     "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
